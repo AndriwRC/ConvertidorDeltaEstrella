@@ -33,7 +33,7 @@ public class Convertidor extends javax.swing.JFrame {
         lblDelta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(null);
 
         txtRbc.setDropMode(javax.swing.DropMode.INSERT);
@@ -43,7 +43,7 @@ public class Convertidor extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtRbc);
-        txtRbc.setBounds(160, 130, 70, 40);
+        txtRbc.setBounds(160, 130, 70, 45);
 
         txtRab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,9 +51,9 @@ public class Convertidor extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtRab);
-        txtRab.setBounds(110, 200, 70, 40);
+        txtRab.setBounds(100, 200, 70, 45);
         getContentPane().add(txtRac);
-        txtRac.setBounds(60, 130, 70, 40);
+        txtRac.setBounds(50, 130, 70, 45);
 
         lblDelta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/cuc/convertidor/imagenes/Sin título-2.png"))); // NOI18N
         lblDelta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
