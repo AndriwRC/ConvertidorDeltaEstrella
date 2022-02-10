@@ -27,21 +27,51 @@ public class Convertidor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        txtRbc = new javax.swing.JTextField();
+        txtRab = new javax.swing.JTextField();
+        txtRac = new javax.swing.JTextField();
+        lblDelta = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(null);
+
+        txtRbc.setDropMode(javax.swing.DropMode.INSERT);
+        txtRbc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRbcActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtRbc);
+        txtRbc.setBounds(160, 130, 70, 40);
+
+        txtRab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRabActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtRab);
+        txtRab.setBounds(110, 200, 70, 40);
+        getContentPane().add(txtRac);
+        txtRac.setBounds(60, 130, 70, 40);
+
+        lblDelta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/cuc/convertidor/imagenes/Sin título-2.png"))); // NOI18N
+        lblDelta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblDelta.setFocusable(false);
+        getContentPane().add(lblDelta);
+        lblDelta.setBounds(20, 30, 247, 246);
+        lblDelta.getAccessibleContext().setAccessibleParent(txtRbc);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtRbcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRbcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRbcActionPerformed
+
+    private void txtRabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRabActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRabActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +109,9 @@ public class Convertidor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblDelta;
+    private javax.swing.JTextField txtRab;
+    private javax.swing.JTextField txtRac;
+    private javax.swing.JTextField txtRbc;
     // End of variables declaration//GEN-END:variables
 }
