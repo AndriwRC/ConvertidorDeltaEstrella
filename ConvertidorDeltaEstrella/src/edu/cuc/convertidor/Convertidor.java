@@ -87,6 +87,11 @@ public class Convertidor extends javax.swing.JFrame {
         btnConvertirDeltaEstrella.setBounds(150, 400, 100, 23);
 
         btnConvertirEstrellaDelta.setText("Convertir");
+        btnConvertirEstrellaDelta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertirEstrellaDeltaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnConvertirEstrellaDelta);
         btnConvertirEstrellaDelta.setBounds(330, 400, 100, 23);
 
@@ -127,6 +132,26 @@ public class Convertidor extends javax.swing.JFrame {
     private void txtRbc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRbc1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRbc1ActionPerformed
+
+    private void btnConvertirEstrellaDeltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirEstrellaDeltaActionPerformed
+        // Capturar los valores de las cajas de texto
+        double ra = Double.parseDouble(txtRa.getText());
+        double rb = Double.parseDouble(txtRb.getText());
+        double rc = Double.parseDouble(txtRc.getText());
+        
+        // Calcular el producto de las parejas de resistencia
+        double producto = (ra * rb) + (ra * rc) + (rb * rc);
+        
+        // Calcular las resistencias del circuito delta dividiendo el producto entre la resistencia opuesta
+        double rab = producto/rc;
+        double rac = producto/rb;
+        double rbc = producto/ra;
+        
+        // Mostrar el resultado en el diagrama del circuito delta
+        txtRab.setText(String.valueOf(rab));
+        txtRac.setText(String.valueOf(rac));
+        txtRbc.setText(String.valueOf(rbc));
+    }//GEN-LAST:event_btnConvertirEstrellaDeltaActionPerformed
 
     /**
      * @param args the command line arguments
