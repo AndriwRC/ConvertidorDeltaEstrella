@@ -83,6 +83,11 @@ public class Convertidor extends javax.swing.JFrame {
 
         btnConvertirDeltaEstrella.setText("Convertir");
         btnConvertirDeltaEstrella.setToolTipText("");
+        btnConvertirDeltaEstrella.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertirDeltaEstrellaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnConvertirDeltaEstrella);
         btnConvertirDeltaEstrella.setBounds(150, 400, 100, 23);
 
@@ -152,6 +157,26 @@ public class Convertidor extends javax.swing.JFrame {
         txtRac.setText(String.valueOf(rac));
         txtRbc.setText(String.valueOf(rbc));
     }//GEN-LAST:event_btnConvertirEstrellaDeltaActionPerformed
+
+    private void btnConvertirDeltaEstrellaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirDeltaEstrellaActionPerformed
+        // Capturar los valores de las cajas de texto
+        double rab = Double.parseDouble(txtRab.getText());
+        double rac = Double.parseDouble(txtRac.getText());
+        double rbc = Double.parseDouble(txtRbc.getText());
+        
+        // Calcular la suma total de las resistencias
+        double sumatoria = rab + rac + rbc;
+        
+        // Calcular cada resistencia
+        double ra = (rab * rac) / sumatoria;
+        double rb = (rab * rbc) / sumatoria;
+        double rc = (rac* rbc) / sumatoria;
+        
+        // Mostrar el resultado en el diagrama del circuito delta
+        txtRa.setText(String.valueOf(ra));
+        txtRb.setText(String.valueOf(rb));
+        txtRc.setText(String.valueOf(rc));
+    }//GEN-LAST:event_btnConvertirDeltaEstrellaActionPerformed
 
     /**
      * @param args the command line arguments
