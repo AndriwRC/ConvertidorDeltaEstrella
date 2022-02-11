@@ -94,7 +94,7 @@ public class Convertidor extends javax.swing.JFrame {
         getContentPane().add(lblEstrella);
         lblEstrella.setBounds(350, 80, 226, 260);
 
-        lblDelta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/cuc/convertidor/imagenes/Sin título-2.png"))); // NOI18N
+        lblDelta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/cuc/convertidor/imagenes/imgDelta.png"))); // NOI18N
         lblDelta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblDelta.setFocusable(false);
         getContentPane().add(lblDelta);
