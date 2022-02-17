@@ -41,6 +41,7 @@ public class Convertidor extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lblDeltaAEstrella = new javax.swing.JLabel();
         lblEstrellaADelta = new javax.swing.JLabel();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Convertidor Delta Estrella");
@@ -123,6 +124,15 @@ public class Convertidor extends javax.swing.JFrame {
         getContentPane().add(lblEstrellaADelta);
         lblEstrellaADelta.setBounds(340, 380, 80, 14);
 
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLimpiar);
+        btnLimpiar.setBounds(230, 430, 110, 23);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -178,6 +188,16 @@ public class Convertidor extends javax.swing.JFrame {
         txtRc.setText(String.valueOf(rc));
     }//GEN-LAST:event_btnConvertirDeltaEstrellaActionPerformed
 
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+        txtRa.setText(null);
+        txtRab.setText(null);
+        txtRac.setText(null);
+        txtRb.setText(null);
+        txtRbc.setText(null);
+        txtRc.setText(null);
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -216,6 +236,7 @@ public class Convertidor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConvertirDeltaEstrella;
     private javax.swing.JButton btnConvertirEstrellaDelta;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblDelta;
     private javax.swing.JLabel lblDeltaAEstrella;
