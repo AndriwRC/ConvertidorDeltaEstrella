@@ -163,9 +163,9 @@ public class Convertidor extends javax.swing.JFrame {
         double rbc = producto/ra;
         
         // Mostrar el resultado en el diagrama del circuito delta
-        txtRab.setText(String.valueOf(rab));
-        txtRac.setText(String.valueOf(rac));
-        txtRbc.setText(String.valueOf(rbc));
+        txtRab.setText(String.valueOf(Math.round(rab*100)/100.0));
+        txtRac.setText(String.valueOf(Math.round(rac*100)/100.0));
+        txtRbc.setText(String.valueOf(Math.round(rbc*100)/100.0));
     }//GEN-LAST:event_btnConvertirEstrellaDeltaActionPerformed
 
     private void btnConvertirDeltaEstrellaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirDeltaEstrellaActionPerformed
@@ -183,9 +183,9 @@ public class Convertidor extends javax.swing.JFrame {
         double rc = (rac* rbc) / sumatoria;
         
         // Mostrar el resultado en el diagrama del circuito delta
-        txtRa.setText(String.valueOf(ra));
-        txtRb.setText(String.valueOf(rb));
-        txtRc.setText(String.valueOf(rc));
+        txtRa.setText(String.valueOf(Math.round(ra*100)/100.0));
+        txtRb.setText(String.valueOf(Math.round(rb*100)/100.0));
+        txtRc.setText(String.valueOf(Math.round(rc*100)/100.0));
     }//GEN-LAST:event_btnConvertirDeltaEstrellaActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
