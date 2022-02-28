@@ -114,15 +114,15 @@ public class Convertidor extends javax.swing.JFrame {
 
         jLabel1.setText("Rellena los espacios en blanco para declarar las resistencias ya sea de Delta o de Estrella.");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(80, 40, 440, 14);
+        jLabel1.setBounds(40, 40, 540, 14);
 
         lblDeltaAEstrella.setText("Delta a Estrella");
         getContentPane().add(lblDeltaAEstrella);
-        lblDeltaAEstrella.setBounds(160, 380, 80, 14);
+        lblDeltaAEstrella.setBounds(160, 380, 130, 14);
 
         lblEstrellaADelta.setText("Estrella a Delta");
         getContentPane().add(lblEstrellaADelta);
-        lblEstrellaADelta.setBounds(340, 380, 80, 14);
+        lblEstrellaADelta.setBounds(340, 380, 170, 14);
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
